@@ -24,37 +24,34 @@ To run this project locally, follow these steps:
    ```
 
 2. Install dependencies for the backend:
+
    ```
    cd backend
    npm install
    ```
 
-```
-
-
 3. Install dependencies for the frontend:
-```
 
+```
 cd frontend
 npm install
-
 ```
 
 4. Create a .env file in the backend directory and configure the required environment variables. Refer to .env.example for details.
 
 5. Start the backend server:
-```
 
+```
 cd backend
 npm start
-
 ```
 
 6. Start the frontend server:
-```
 
+```
 cd frontend
-npm start ```
+npm start
+```
 
 7. Open your browser and navigate to http://localhost:3000 to view the application.
 

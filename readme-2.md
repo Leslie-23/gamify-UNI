@@ -28,8 +28,6 @@ Assuming you have a typical RESTful setup, the backend routes might look like th
 
 ### Frontend Routes
 
-Assuming you are using React Router for the frontend, the routes might be structured like this:
-
 #### Main Application Routes
 
 1. **/** - Home page or dashboard.

@@ -2,6 +2,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
+const cors = require("cors");
 
 // Load environment variables
 dotenv.config();
@@ -14,6 +15,9 @@ const app = express();
 
 // Middleware to parse incoming JSON requests
 app.use(express.json());
+
+// Use CORS middleware
+app.use(cors({ origin: "http://localhost:5173" })); // Allow requests from the frontend
 
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));

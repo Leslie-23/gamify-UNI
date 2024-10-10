@@ -27,6 +27,7 @@ To run this project locally, follow these steps:
    ```
    cd backend
    npm install
+   ```
 
 ```
 
@@ -53,20 +54,20 @@ npm start
 ```
 
 cd frontend
-npm start
-
-```
+npm start ```
 
 7. Open your browser and navigate to http://localhost:3000 to view the application.
 
 ## Usage
+
 - Create an account or log in to access the task management features.
 - Add new tasks and assign them to categories.
 - Update task statuses as you progress through your tasks.
 
 ### License
+
 This project is licensed under the MIT License. You are free to use, modify, and distribute this software. See the LICENSE file for more details.
 
 # Disclaimer
+
 This application is currently in development. Features and functionalities may change over time.
-```

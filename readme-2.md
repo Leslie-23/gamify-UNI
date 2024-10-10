@@ -1,5 +1,3 @@
-Based on our previous discussions and the context you've provided, here’s a comprehensive overview of the backend and frontend routes that are likely being used in your MERN stack Task Management App.
-
 ### Backend Routes
 
 Assuming you have a typical RESTful setup, the backend routes might look like the following:

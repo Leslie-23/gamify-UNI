@@ -8,7 +8,7 @@ const CategoryList = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("/api/categories");
+        const response = await axios.get("http://localhost/api/categories");
 
         // Check if response.data is an array
         if (Array.isArray(response.data)) {

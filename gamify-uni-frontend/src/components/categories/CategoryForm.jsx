@@ -8,7 +8,9 @@ const CategoryForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/categories", { name: categoryName });
+      await axios.post("http://localhost/api/categories", {
+        name: categoryName,
+      });
       setCategoryName("");
       alert("Category added!");
     } catch (err) {

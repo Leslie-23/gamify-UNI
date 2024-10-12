@@ -9,7 +9,10 @@ const TaskForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/tasks", { name: taskName, category });
+      await axios.post("http://localhost:5000/api/tasks", {
+        name: taskName,
+        category,
+      });
       setTaskName("");
       setCategory("");
       alert("Task added!");

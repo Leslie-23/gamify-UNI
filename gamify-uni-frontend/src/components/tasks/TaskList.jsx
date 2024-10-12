@@ -9,7 +9,7 @@ const TaskList = () => {
     // Fetch tasks from backend
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("/api/tasks");
+        const response = await axios.get("http://localhost/api/tasks");
 
         // Check if response.data is an array
         if (Array.isArray(response.data)) {

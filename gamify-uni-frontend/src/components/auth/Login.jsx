@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 // Load environment variables
 // dotenv.config({ path: "../../.env" });
 
-const BACKEND_API_URL = "http://localhost:5000" || process.env.BACKEND_API_URL;
+const BACKEND_API_URL = "http://localhost:5000";
 const Login = () => {
-  console.log(`${process.env.BACKEND_API_URL}`);
+  // console.log(`${process.env.BACKEND_API_URL}`);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();

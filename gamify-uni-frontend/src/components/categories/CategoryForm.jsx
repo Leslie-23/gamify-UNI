@@ -2,13 +2,15 @@
 import { useState } from "react";
 import axios from "axios";
 
+const BACKEND_API_URL = "http://localhost:5000";
+
 const CategoryForm = () => {
   const [categoryName, setCategoryName] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost/api/categories", {
+      await axios.post(`${BACKEND_API_URL}/api/categories`, {
         name: categoryName,
       });
       setCategoryName("");

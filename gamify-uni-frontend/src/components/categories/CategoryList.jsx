@@ -2,13 +2,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const BACKEND_API_URL = "http://localhost:5000";
+
 const CategoryList = () => {
   const [categories, setCategories] = useState([]); // Ensure categories starts as an empty array
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("http://localhost/api/categories");
+        const response = await axios.get(`${BACKEND_API_URL}/api/categories`);
 
         // Check if response.data is an array
         if (Array.isArray(response.data)) {

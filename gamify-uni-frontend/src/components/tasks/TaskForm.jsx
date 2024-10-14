@@ -6,10 +6,15 @@ const TaskForm = () => {
   const [taskName, setTaskName] = useState("");
   const [category, setCategory] = useState("");
 
+  const BACKEND_API_URL = "http://localhost:5000";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/tasks", { name: taskName, category });
+      await axios.post(`${BACKEND_API_URL}/api/tasks`, {
+        name: taskName,
+        category,
+      });
       setTaskName("");
       setCategory("");
       alert("Task added!");

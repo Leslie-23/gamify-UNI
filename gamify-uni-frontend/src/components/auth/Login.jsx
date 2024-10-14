@@ -3,17 +3,24 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
 import "./Login.css";
+=======
+// import dotenv from "dotenv";
 
+
+// Load environment variables
+// dotenv.config({ path: "../../.env" });
+
+const BACKEND_API_URL = "http://localhost:5000";
 const Login = () => {
-  // State for login form
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
 
-  // State for register form
-  const [registerUsername, setRegisterUsername] = useState("");
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
+
+
+
+  // console.log(`${process.env.BACKEND_API_URL}`);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
 
@@ -27,9 +34,12 @@ const Login = () => {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
-        email: loginEmail,
-        password: loginPassword,
+
+
+      const res = await axios.post(`${BACKEND_API_URL}/api/auth/login`, {
+        email,
+        password,
+
       });
       localStorage.setItem("token", res.data.token); // Save token in local storage
       navigate("/dashboard");
@@ -54,6 +64,7 @@ const Login = () => {
   };
 
   return (
+
     <div className={`wrapper ${isLoginActive ? '' : 'active'}`}>
       <span className="rotate-bg"></span>
       <span className="rotate-bg2"></span>
@@ -140,6 +151,8 @@ const Login = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, rem?
         </p>
       </div>
+
+   
     </div>
   );
 };

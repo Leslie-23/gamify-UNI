@@ -2,6 +2,8 @@
 import { useState } from "react";
 import axios from "axios";
 
+const BACKEND_API_URL = "http://localhost:5000";
+
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -10,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", {
+      await axios.post(`${BACKEND_API_URL}/api/auth/register`, {
         username,
         email,
         password,

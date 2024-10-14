@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const BACKEND_API_URL = "http://localhost:5000";
+
 const TaskList = () => {
   const [tasks, setTasks] = useState([]); // Initialize tasks as an empty array
 
@@ -9,7 +11,7 @@ const TaskList = () => {
     // Fetch tasks from backend
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("/api/tasks");
+        const response = await axios.get(`${BACKEND_API_URL}/api/tasks`);
 
         // Check if response.data is an array
         if (Array.isArray(response.data)) {

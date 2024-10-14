@@ -5,6 +5,8 @@ import Register from "./components/auth/Register";
 import Dashboard from "./pages/Dashboard";
 import { TaskProvider } from "./context/TaskContext";
 import { CategoryProvider } from "./context/CategoryContext";
+import 'boxicons/css/boxicons.min.css';
+
 
 function App() {
   return (
